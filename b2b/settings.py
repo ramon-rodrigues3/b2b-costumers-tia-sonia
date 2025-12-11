@@ -55,7 +55,7 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -144,9 +144,9 @@ if PRODUCTION:
     }
 
     DEBUG = False
-    WSGI_APPLICATION = 'api.wsgi.app'
+    WSGI_APPLICATION = 'b2b.wsgi.app'
     ALLOWED_HOSTS = ['.vercel.app']
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+    #STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 else:
     # Database
